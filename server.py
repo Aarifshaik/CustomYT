@@ -7,10 +7,13 @@ import re
 app = Flask(__name__)
 
 
-def clean_youtube_url(url):
-    match = re.search(r"(https://youtube\.com/shorts/[\w-]+)", url)
-    return match.group(1) if match else None
+# def clean_youtube_url(url):
+#     match = re.search(r"(https://youtube\.com/shorts/[\w-]+)", url)
+#     return match.group(1) if match else None
 
+
+# def sanitize_filename(filename):
+    # return re.sub(r'[\\/*?:"<>|]', "", filename).replace(" ", "_")
 
 @app.route('/')
 def home():
@@ -21,7 +24,7 @@ def home():
 def download_video():
     data = request.get_json()
     video_url = data.get("url")
-    video_url = clean_youtube_url(video_url)
+    # video_url = clean_youtube_url(video_url)
     # print(video_url)
     # return 0
 
