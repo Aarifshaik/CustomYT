@@ -36,6 +36,7 @@ def download_video():
     ydl_opts = {
         'format': 'best',
         'outtmpl': output_path,
+        'cookiefile': 'cookies.txt', 
     }
 
     try:
