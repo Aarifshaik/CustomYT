@@ -82,13 +82,13 @@
 import os
 import re
 from flask import Flask, request, send_file, jsonify
-from flask_cors import CORS  # Import CORS
+# from flask_cors import CORS  # Import CORS
 # import time
 import yt_dlp
 import glob
 
 app = Flask(__name__)
-CORS(app)  # Add CORS support
+# CORS(app)  # Add CORS support
 
 def sanitize_filename(filename):
     """Sanitize filename by removing invalid characters and replacing spaces with underscores."""
